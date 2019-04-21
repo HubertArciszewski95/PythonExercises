@@ -6,14 +6,14 @@
 def find_message(msg):
     secret = ""
     for x in msg:
-        if x == x.upper() and x.isalnum():
+        if x == x.upper() and x.isalpha():
             secret += x
     return secret
 
 
 # Second solution
 def find_message2(msg):
-    z = [x for x in msg if x == x.upper() and x.isalnum()]
+    z = [x for x in msg if x == x.upper() and x.isalpha()]
     return "".join(z)
 
 
