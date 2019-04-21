@@ -6,17 +6,16 @@
 def find_message(msg):
     secret = ""
     for x in msg:
-        if x == x.upper() and x.isalpha():
+        if x.isupper():
             secret += x
     return secret
 
 
 # Second solution
 def find_message2(msg):
-    z = [x for x in msg if x == x.upper() and x.isalpha()]
-    return "".join(z)
+    return "".join([x for x in msg if x.isupper()])
 
 
 print(find_message("How are you? Eh, ok. Low or Lower? Ohhh.")) # "HELLO"
 print(find_message("hello world!")) # "", "Nothing"
-print(find_message("HELLO WORLD!!!"))  # HELLOWORLD", "Capitals"
+print(find_message("HELLO WORLD!!!123"))  # HELLOWORLD", "Capitals"
