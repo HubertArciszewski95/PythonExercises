@@ -3,9 +3,7 @@
 
 
 def word_counter(data):
-    read_data = data.read()
-    split_data = read_data.split()
-    return len(split_data)
+    return len(data.read().split())
 
 
 with open("/Users/hubertarciszewski/Downloads/words1.txt", "r") as data:
