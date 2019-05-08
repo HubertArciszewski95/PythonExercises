@@ -8,11 +8,11 @@ counter = 0
 letters = string.ascii_lowercase
 
 while counter <= 26:
-    file = open(f"{letters[counter]}.txt", "w")
-    file.write(letters[counter])
+    with open(f"{letters[counter]}.txt", "w") as file:
+        file.write(letters[counter])
     counter += 1
 
 # Simplest version
 for x in string.ascii_lowercase:
-    file1 = open(f"{x}.txt", "w")
-    file1.write(x)
+    with open(f"{x}.txt", "w") as file1:
+        file1.write(x)
